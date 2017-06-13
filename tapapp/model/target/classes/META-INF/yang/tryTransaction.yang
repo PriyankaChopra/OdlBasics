@@ -1,0 +1,30 @@
+module tryTransaction {
+    yang-version 1;
+    namespace "urn:tryTransaction";
+    prefix tryTransaction;
+
+    revision "2016-05-22" {
+        description "Initial version - learning datastore transactions";
+    }
+
+    container tryTransaction {
+        list tryList {
+            key "id";
+            leaf id {
+               type string;
+            }
+        }
+        container innerContainer {
+        	list anotherParam{
+    			leaf name{
+    				type string;
+    			}
+    			leaf password{
+    				type uint32;
+    			}
+    		}
+     	}
+    }
+    
+}
+

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<application xmlns="http://wadl.dev.java.net/2009/02"  xmlns:tryTransaction="urn:tryTransaction">
+
+	<grammars>
+		<include href="tryTransaction.yang"/>
+	</grammars>
+	
+	<resources base="http://localhost:9998/restconf">
+		<resource path="config">
+			<method name="POST">
+				<request>
+					<representation mediaType="application/xml" element="tryTransaction"/>
+					<representation mediaType="text/xml" element="tryTransaction"/>
+					<representation mediaType="application/json" element="tryTransaction"/>
+					<representation mediaType="application/yang.data+xml" element="tryTransaction"/>
+					<representation mediaType="application/yang.data+json" element="tryTransaction"/>
+				</request>
+			</method>
+			<resource path="tryTransaction:tryTransaction">
+				<method name="GET">
+					<response>
+						<representation mediaType="application/xml" element="tryTransaction"/>
+						<representation mediaType="text/xml" element="tryTransaction"/>
+						<representation mediaType="application/json" element="tryTransaction"/>
+						<representation mediaType="application/yang.data+xml" element="tryTransaction"/>
+						<representation mediaType="application/yang.data+json" element="tryTransaction"/>
+					</response>
+				</method>
+				<method name="DELETE" />
+				<method name="PUT">
+					<request>
+						<representation mediaType="application/xml" element="tryTransaction"/>
+						<representation mediaType="text/xml" element="tryTransaction"/>
+						<representation mediaType="application/json" element="tryTransaction"/>
+						<representation mediaType="application/yang.data+xml" element="tryTransaction"/>
+						<representation mediaType="application/yang.data+json" element="tryTransaction"/>
+					</request>
+				</method>
+				<method name="POST">
+					<request>
+						<representation mediaType="application/xml" element="tryList"/>
+						<representation mediaType="text/xml" element="tryList"/>
+						<representation mediaType="application/json" element="tryList"/>
+						<representation mediaType="application/yang.data+xml" element="tryList"/>
+						<representation mediaType="application/yang.data+json" element="tryList"/>
+					</request>
+				</method>
+				<method name="POST">
+					<request>
+						<representation mediaType="application/xml" element="innerContainer"/>
+						<representation mediaType="text/xml" element="innerContainer"/>
+						<representation mediaType="application/json" element="innerContainer"/>
+						<representation mediaType="application/yang.data+xml" element="innerContainer"/>
+						<representation mediaType="application/yang.data+json" element="innerContainer"/>
+					</request>
+				</method>
+				<resource path="tryList/{id}">
+					<param required="true" style="template" name="id" type="string"/>
+					<method name="GET">
+						<response>
+							<representation mediaType="application/xml" element="tryList"/>
+							<representation mediaType="text/xml" element="tryList"/>
+							<representation mediaType="application/json" element="tryList"/>
+							<representation mediaType="application/yang.data+xml" element="tryList"/>
+							<representation mediaType="application/yang.data+json" element="tryList"/>
+						</response>
+					</method>
+					<method name="DELETE" />
+					<method name="PUT">
+						<request>
+							<representation mediaType="application/xml" element="tryList"/>
+							<representation mediaType="text/xml" element="tryList"/>
+							<representation mediaType="application/json" element="tryList"/>
+							<representation mediaType="application/yang.data+xml" element="tryList"/>
+							<representation mediaType="application/yang.data+json" element="tryList"/>
+						</request>
+					</method>
+				</resource>
+				<resource path="innerContainer">
+					<method name="GET">
+						<response>
+							<representation mediaType="application/xml" element="innerContainer"/>
+							<representation mediaType="text/xml" element="innerContainer"/>
+							<representation mediaType="application/json" element="innerContainer"/>
+							<representation mediaType="application/yang.data+xml" element="innerContainer"/>
+							<representation mediaType="application/yang.data+json" element="innerContainer"/>
+						</response>
+					</method>
+					<method name="DELETE" />
+					<method name="PUT">
+						<request>
+							<representation mediaType="application/xml" element="innerContainer"/>
+							<representation mediaType="text/xml" element="innerContainer"/>
+							<representation mediaType="application/json" element="innerContainer"/>
+							<representation mediaType="application/yang.data+xml" element="innerContainer"/>
+							<representation mediaType="application/yang.data+json" element="innerContainer"/>
+						</request>
+					</method>
+					<method name="POST">
+						<request>
+							<representation mediaType="application/xml" element="anotherParam"/>
+							<representation mediaType="text/xml" element="anotherParam"/>
+							<representation mediaType="application/json" element="anotherParam"/>
+							<representation mediaType="application/yang.data+xml" element="anotherParam"/>
+							<representation mediaType="application/yang.data+json" element="anotherParam"/>
+						</request>
+					</method>
+					<resource path="anotherParam">
+						<method name="GET">
+							<response>
+								<representation mediaType="application/xml" element="anotherParam"/>
+								<representation mediaType="text/xml" element="anotherParam"/>
+								<representation mediaType="application/json" element="anotherParam"/>
+								<representation mediaType="application/yang.data+xml" element="anotherParam"/>
+								<representation mediaType="application/yang.data+json" element="anotherParam"/>
+							</response>
+						</method>
+						<method name="DELETE" />
+						<method name="PUT">
+							<request>
+								<representation mediaType="application/xml" element="anotherParam"/>
+								<representation mediaType="text/xml" element="anotherParam"/>
+								<representation mediaType="application/json" element="anotherParam"/>
+								<representation mediaType="application/yang.data+xml" element="anotherParam"/>
+								<representation mediaType="application/yang.data+json" element="anotherParam"/>
+							</request>
+						</method>
+					</resource>
+				</resource>
+			</resource>
+		</resource>
+	</resources>
+</application>

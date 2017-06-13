@@ -1,0 +1,4 @@
+org.opendaylight.yang.gen.v1.urn.trynotification.rev160525.$YangModelBindingProvider
+org.opendaylight.yang.gen.v1.urn.rpcyang.rev160524.$YangModelBindingProvider
+org.opendaylight.yang.gen.v1.urn.sdnhub.tutorial.odl.tap.rev150601.$YangModelBindingProvider
+org.opendaylight.yang.gen.v1.urn.trytransaction.rev160522.$YangModelBindingProvider

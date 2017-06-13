@@ -1,0 +1,46 @@
+module rpcYang {
+    yang-version 1;
+    namespace "urn:rpcYang";
+    prefix rpcYang;
+
+    revision "2016-05-24" {
+        description "Initial version - learning RPC";
+    }
+
+    grouping groupingObj {
+        leaf name {
+            type string;
+        }
+        leaf-list leafListObj {
+            min-elements 1;
+            type string;
+        }
+        list listObj{
+        	leaf username {
+				type string;
+			}
+			leaf password {
+				type uint32;
+			}
+		}	
+    }
+
+    rpc checkContainerRpc {
+    	input {
+    		container containerObj {
+        		leaf contName {
+            		type string;
+            	}
+        		uses groupingObj;
+    		}
+    	}
+    	output {
+    		leaf status {
+    			type boolean;
+    		}
+    	}
+    } 
+    
+    
+}
+

@@ -1,0 +1,34 @@
+module tryNotification {
+    yang-version 1;
+    namespace "urn:tryNotification";
+    prefix tryNotification;
+
+    revision "2016-05-25" {
+        description "Initial version - learning Notification";
+    }
+
+    notification trySampleNotification {
+    	leaf notifName{
+    		type string;
+    	}
+    	list notifDataObjects{
+    		leaf objType {
+    			type string;
+    		}
+    		leaf notifStatus{
+    			type enumeration {
+          			enum "done" {
+            		value 0;
+            		description "The obj is done.";
+          			}
+          			enum "cancelled" {
+            		value 1;
+            		description
+              		"The obj was cancelled.";
+          			}
+          		}
+    		}	
+    	} 
+	}
+}
+
